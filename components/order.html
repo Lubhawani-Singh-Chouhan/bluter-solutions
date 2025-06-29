@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order - Bluter Solutions</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/styles.css">
+</head>
+<body>
+    <!-- Navbar (copied from main) -->
+    <nav class="navbar navbar-expand-lg" style="background-color: #0c4144 !important;">
+        <div class="container-fluid">
+            <div class="d-flex align-items-center">
+                <ul class="navbar-nav me-3 mb-2 mb-lg-0">
+                    <li class="nav-item"><a class="nav-link" href="../index.html#about" style="color:#fff !important;">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../index.html#gallery" style="color:#fff !important;">Gallery</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../components/contact.html" style="color:#fff !important;">Contact Us</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="order.html" style="color:#fff !important;">Order</a></li>
+                </ul>
+            </div>
+            <a class="navbar-brand mx-auto" href="../index.html">
+                <img src="../assets/logo.png" alt="Logo" width="60" height="60" class="d-inline-block align-text-top">
+            </a>
+            <div class="d-flex align-items-center">
+                <a href="#" class="me-3"><i class="bi bi-instagram fs-4" style="color:#fff;"></i></a>
+                <a href="#" class="me-3"><i class="bi bi-whatsapp fs-4" style="color:#fff;"></i></a>
+                <a href="#"><i class="bi bi-facebook fs-4" style="color:#fff;"></i></a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Content Area -->
+    <main class="container my-5">
+        <!-- How to Order Steps -->
+        <section class="mb-5">
+            <h2 class="mb-4 text-center">How to Order</h2>
+            <ol class="list-group list-group-numbered mb-4 mx-auto" style="max-width: 600px;">
+                <li class="list-group-item">Browse our products in the Gallery.</li>
+                <li class="list-group-item">Contact us via WhatsApp or the Contact Us page.</li>
+                <li class="list-group-item">Place your order and receive confirmation.</li>
+                <li class="list-group-item">Enjoy fast and secure delivery!</li>
+            </ol>
+        </section>
+
+        <!-- Get a Quote Section -->
+        <section class="get-quote-section p-4 mb-5" style="background:#F0F7FF; border-radius:10px; max-width:700px; margin:auto;">
+            <h3 class="mb-4 text-center">Get a Quote</h3>
+            <form id="quoteForm" enctype="multipart/form-data">
+                <!-- Requirement: Bottle Size -->
+                <div class="mb-3">
+                    <label class="form-label fw-bold">Select Bottle Size</label>
+                    <div class="d-flex gap-3">
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="bottleSize" id="size500" value="500mL" required>
+                            <label class="form-check-label" for="size500">500mL</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="bottleSize" id="size750" value="750mL">
+                            <label class="form-check-label" for="size750">750mL</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="bottleSize" id="size1l" value="1L">
+                            <label class="form-check-label" for="size1l">1L</label>
+                        </div>
+                    </div>
+                </div>
+                <!-- Pack Of -->
+                <div class="mb-3">
+                    <label class="form-label fw-bold">Pack Of</label>
+                    <div class="d-flex gap-3">
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="packOf" id="pack6" value="6" required>
+                            <label class="form-check-label" for="pack6">6</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="packOf" id="pack12" value="12">
+                            <label class="form-check-label" for="pack12">12</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="packOf" id="pack24" value="24">
+                            <label class="form-check-label" for="pack24">24</label>
+                        </div>
+                    </div>
+                </div>
+                <!-- Name, Email, Phone -->
+                <div class="mb-3">
+                    <label class="form-label fw-bold" for="name">Name</label>
+                    <input type="text" class="form-control" id="name" name="name" required>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label fw-bold" for="email">Email ID</label>
+                    <input type="email" class="form-control" id="email" name="email" required>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label fw-bold" for="phone">Phone Number</label>
+                    <input type="tel" class="form-control" id="phone" name="phone" required>
+                </div>
+                <!-- Customize Checkbox -->
+                <div class="mb-3 form-check">
+                    <input type="checkbox" class="form-check-input" id="customizeCheck" name="customize">
+                    <label class="form-check-label fw-bold" for="customizeCheck">Customize</label>
+                </div>
+                <!-- Customization Options (hidden by default) -->
+                <div id="customOptions" style="display:none;">
+                    <div class="mb-3">
+                        <label class="form-label fw-bold" for="brandLogo">Your Brand Logo</label>
+                        <input type="file" class="form-control" id="brandLogo" name="brandLogo" accept="image/*">
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label fw-bold" for="themeDesc">Describe Theme</label>
+                        <textarea class="form-control" id="themeDesc" name="themeDesc" rows="3" placeholder="Describe your theme..."></textarea>
+                    </div>
+                </div>
+                <button type="submit" class="btn btn-primary w-100 mt-3">Submit</button>
+            </form>
+        </section>
+    </main>
+
+    <!-- Footer (copied from main) -->
+    <footer class="footer bg-dark text-white py-4">
+        <div class="container text-center">
+            <div class="row">
+                <div class="col-md-4 mb-3 mb-md-0">
+                    <h5>Bluter Solutions</h5>
+                    <p>&copy; 2025 All rights reserved.</p>
+                </div>
+                <div class="col-md-4 mb-3 mb-md-0">
+                    <h5>Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="../index.html#about" class="text-white">About</a></li>
+                        <li><a href="../index.html#gallery" class="text-white">Gallery</a></li>
+                        <li><a href="../index.html#contact" class="text-white">Contact Us</a></li>
+                        <li><a href="order.html" class="text-white">Order</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h5>Contact</h5>
+                    <p>Email: info@blutersolutions.com</p>
+                    <p>Phone: +123 456 7890</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+    // Show/hide customization options
+    document.getElementById('customizeCheck').addEventListener('change', function() {
+        document.getElementById('customOptions').style.display = this.checked ? 'block' : 'none';
+    });
+
+    // Handle form submission
+    document.getElementById('quoteForm').addEventListener('submit', async function(e) {
+        e.preventDefault();
+        const form = e.target;
+        const formData = new FormData(form);
+        // If customize is not checked, remove brandLogo and themeDesc
+        if (!form.customize.checked) {
+            formData.delete('brandLogo');
+            formData.delete('themeDesc');
+        }
+        try {
+            const response = await fetch('http://localhost:5000/api/orders', {
+                method: 'POST',
+                body: formData
+            });
+            const result = await response.json();
+            if (response.ok) {
+                alert('Order submitted successfully!');
+                form.reset();
+                document.getElementById('customOptions').style.display = 'none';
+            } else {
+                alert(result.error || 'Submission failed.');
+            }
+        } catch (err) {
+            alert('Could not submit order.');
+        }
+    });
+    </script>
+</body>
+</html>

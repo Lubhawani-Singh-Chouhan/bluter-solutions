@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard - Bluter Solutions</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/styles.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg" style="background-color: #0c4144 !important;">
+        <div class="container-fluid">
+            <a class="navbar-brand mx-auto" href="../index.html">
+                <img src="../assets/logo.png" alt="Logo" width="60" height="60" class="d-inline-block align-text-top">
+            </a>
+            <span class="navbar-text text-white fw-bold">Admin Dashboard</span>
+        </div>
+    </nav>
+    <main class="container my-5">
+        <h2 class="mb-4 text-center">Orders</h2>
+        <div class="table-responsive mb-5">
+            <table class="table table-bordered table-striped" id="ordersTable">
+                <thead class="table-dark">
+                    <tr>
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>Phone</th>
+                        <th>Bottle Size</th>
+                        <th>Pack Of</th>
+                        <th>Customize</th>
+                        <th>Theme Desc</th>
+                        <th>Brand Logo</th>
+                        <th>Date</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </div>
+        <h2 class="mb-4 text-center">Contact Submissions</h2>
+        <div class="table-responsive">
+            <table class="table table-bordered table-striped" id="contactsTable">
+                <thead class="table-dark">
+                    <tr>
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>Phone</th>
+                        <th>Date</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </div>
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        async function fetchOrders() {
+            const res = await fetch('/api/admin/orders');
+            const orders = await res.json();
+            const tbody = document.querySelector('#ordersTable tbody');
+            tbody.innerHTML = '';
+            orders.forEach(order => {
+                tbody.innerHTML += `<tr>
+                    <td>${order.name}</td>
+                    <td>${order.email}</td>
+                    <td>${order.phone}</td>
+                    <td>${order.bottleSize}</td>
+                    <td>${order.packOf}</td>
+                    <td>${order.customize ? 'Yes' : 'No'}</td>
+                    <td>${order.themeDesc || ''}</td>
+                    <td>${order.brandLogo ? `<a href='/uploads/${order.brandLogo}' target='_blank'>View</a>` : ''}</td>
+                    <td>${new Date(order.createdAt).toLocaleString()}</td>
+                </tr>`;
+            });
+        }
+        async function fetchContacts() {
+            const res = await fetch('/api/admin/contacts');
+            const contacts = await res.json();
+            const tbody = document.querySelector('#contactsTable tbody');
+            tbody.innerHTML = '';
+            contacts.forEach(contact => {
+                tbody.innerHTML += `<tr>
+                    <td>${contact.name}</td>
+                    <td>${contact.email}</td>
+                    <td>${contact.phone}</td>
+                    <td>${new Date(contact.createdAt).toLocaleString()}</td>
+                </tr>`;
+            });
+        }
+        fetchOrders();
+        fetchContacts();
+    });
+    </script>
+</body>
+</html>

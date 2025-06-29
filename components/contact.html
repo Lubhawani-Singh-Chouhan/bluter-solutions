@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Bluter Solutions</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/styles.css">
+</head>
+<body>
+    <!-- Navbar (copied from main site) -->
+    <nav class="navbar navbar-expand-lg" style="background-color: #0c4144 !important;">
+        <div class="container-fluid">
+            <div class="d-flex align-items-center">
+                <ul class="navbar-nav me-3 mb-2 mb-lg-0">
+                    <li class="nav-item"><a class="nav-link" href="../index.html#about" style="color:#fff !important;">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../index.html#gallery" style="color:#fff !important;">Gallery</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="contact.html" style="color:#fff !important;">Contact Us</a></li>
+                    <li class="nav-item"><a class="nav-link" href="order.html" style="color:#fff !important;">Order</a></li>
+                </ul>
+            </div>
+            <a class="navbar-brand mx-auto" href="../index.html">
+                <img src="../assets/logo.png" alt="Logo" width="60" height="60" class="d-inline-block align-text-top">
+            </a>
+            <div class="d-flex align-items-center">
+                <a href="#" class="me-3"><i class="bi bi-instagram fs-4" style="color:#fff;"></i></a>
+                <a href="#" class="me-3"><i class="bi bi-whatsapp fs-4" style="color:#fff;"></i></a>
+                <a href="#"><i class="bi bi-facebook fs-4" style="color:#fff;"></i></a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Contact Form Section -->
+    <section class="contact-form-section py-5">
+        <div class="container" style="max-width: 600px;">
+            <h2 class="mb-4 text-center" style="color:#0A74DA; font-weight:700;">Drop your email</h2>
+            <form class="bg-white p-4 rounded shadow-sm">
+                <div class="mb-3">
+                    <label for="name" class="form-label">Enter Name</label>
+                    <input type="text" class="form-control" id="name" name="name" placeholder="Your Name" required>
+                </div>
+                <div class="mb-3">
+                    <label for="email" class="form-label">Enter Email ID</label>
+                    <input type="email" class="form-control" id="email" name="email" placeholder="you@email.com" required>
+                </div>
+                <div class="mb-3">
+                    <label for="phone" class="form-label">Phone Number</label>
+                    <input type="tel" class="form-control" id="phone" name="phone" placeholder="Phone Number" required>
+                </div>
+                <button type="submit" class="btn btn-primary w-100" style="border-radius:10px; background:#0A74DA; border:none; font-weight:600;">Submit</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Location Section -->
+    <section class="location-section py-5">
+        <div class="container" style="max-width: 1369px;">
+            <h2 class="mb-4 text-center" style="color:#6E0437; font-weight:700;">Where are we located</h2>
+            <div class="rounded shadow" style="overflow:hidden; border-radius:16px; width:100%; height:400px;">
+                <iframe src="https://www.google.com/maps?q=XP4Q%2BCJJ,+Parmanand+Nagar,+Shanti+Path,+Jhotwara,+Jaipur,+Rajasthan+302012&output=embed" width="100%" height="400" style="border:0; border-radius:16px; width:100%; height:400px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer (copied from main site) -->
+    <footer class="footer bg-dark text-white py-4">
+        <div class="container text-center">
+            <div class="row">
+                <div class="col-md-4 mb-3 mb-md-0">
+                    <h5>Bluter Solutions</h5>
+                    <p>&copy; 2025 All rights reserved.</p>
+                </div>
+                <div class="col-md-4 mb-3 mb-md-0">
+                    <h5>Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="../index.html#about" class="text-white">About</a></li>
+                        <li><a href="../index.html#gallery" class="text-white">Gallery</a></li>
+                        <li><a href="contact.html" class="text-white">Contact Us</a></li>
+                        <li><a href="order.html" class="text-white">Order</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h5>Contact</h5>
+                    <p>Email: info@blutersolutions.com</p>
+                    <p>Phone: +123 456 7890</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const contactForm = document.querySelector('.contact-form-section form');
+      if (contactForm) {
+        contactForm.addEventListener('submit', async function(e) {
+          e.preventDefault();
+          const form = e.target;
+          const data = {
+            name: form.name.value,
+            email: form.email.value,
+            phone: form.phone.value
+          };
+          try {
+            const response = await fetch('http://localhost:5000/api/contact', {
+              method: 'POST',
+              headers: { 'Content-Type': 'application/json' },
+              body: JSON.stringify(data)
+            });
+            const result = await response.json();
+            if (response.ok) {
+              alert('Contact details submitted successfully!');
+              form.reset();
+            } else {
+              alert(result.error || 'Submission failed.');
+            }
+          } catch (err) {
+            alert('Could not submit contact details.');
+          }
+        });
+      }
+    });
+    </script>
+    <script src="../assets/scripts.js"></script>
+</body>
+</html>
