@@ -9,44 +9,54 @@
     <link rel="stylesheet" href="../assets/styles.css">
 </head>
 <body>
-    <!-- Navbar (copied from main) -->
-    <nav class="navbar navbar-expand-lg" style="background-color: #0c4144 !important;">
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light py-3">
         <div class="container-fluid">
-            <div class="d-flex align-items-center">
+            <div class="d-flex align-items-center justify-content-start" style="flex:1;">
                 <ul class="navbar-nav me-3 mb-2 mb-lg-0">
-                    <li class="nav-item"><a class="nav-link" href="../index.html#about" style="color:#fff !important;">About</a></li>
-                    <li class="nav-item"><a class="nav-link" href="../index.html#gallery" style="color:#fff !important;">Gallery</a></li>
-                    <li class="nav-item"><a class="nav-link" href="../components/contact.html" style="color:#fff !important;">Contact Us</a></li>
-                    <li class="nav-item"><a class="nav-link active" href="order.html" style="color:#fff !important;">Order</a></li>
+                    <li class="nav-item"><a class="nav-link" href="components/about.html">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="components/gallery.html">Gallery</a></li>
+                    <li class="nav-item"><a class="nav-link" href="components/contact.html">Contact Us</a></li>
+                    <li class="nav-item"><a class="nav-link" href="components/order.html">Order</a></li>
                 </ul>
             </div>
-            <a class="navbar-brand mx-auto" href="../index.html">
-                <img src="../assets/logo.png" alt="Logo" width="60" height="60" class="d-inline-block align-text-top">
+            <a class="navbar-brand mx-auto" href="#">
+                <img src="../assets/Bluter logo.png" alt="Logo" width="60" height="60" class="d-inline-block align-text-top">
             </a>
             <div class="d-flex align-items-center">
-                <a href="#" class="me-3"><i class="bi bi-instagram fs-4" style="color:#fff;"></i></a>
-                <a href="#" class="me-3"><i class="bi bi-whatsapp fs-4" style="color:#fff;"></i></a>
-                <a href="#"><i class="bi bi-facebook fs-4" style="color:#fff;"></i></a>
+                <a href="#" class="me-3"><i class="bi bi-instagram fs-4"></i></a>
+                <a href="#" class="me-3"><i class="bi bi-whatsapp fs-4"></i></a>
+                <a href="#"><i class="bi bi-facebook fs-4"></i></a>
             </div>
         </div>
     </nav>
-
+<div class="flap-overlay initial-open">
+  <div class="flap top-flap"></div>
+  <div class="flap bottom-flap"></div>
+</div>
     <!-- Content Area -->
-    <main class="container my-5">
-        <!-- How to Order Steps -->
-        <section class="mb-5">
-            <h2 class="mb-4 text-center">How to Order</h2>
-            <ol class="list-group list-group-numbered mb-4 mx-auto" style="max-width: 600px;">
-                <li class="list-group-item">Browse our products in the Gallery.</li>
-                <li class="list-group-item">Contact us via WhatsApp or the Contact Us page.</li>
-                <li class="list-group-item">Place your order and receive confirmation.</li>
-                <li class="list-group-item">Enjoy fast and secure delivery!</li>
-            </ol>
+    <main class="container" style="margin-top:0 !important;">
+        <!-- How to Order -->
+        <section class="how-to-order py-0" id="order" style="margin-top:0 !important;">
+            <h3 class="mb-4 text-center" style="background-color: #F0F7FF; padding:40px 0; width:100vw; margin-left:50%; transform:translateX(-50%); font-weight:bold; font-size:32px; border:0;">Order</h3>
+            <div class="container" style="padding:0 !important;">
+                <h4 class="mb-4 text-center">3 easy steps:</h4>
+                <div class="row justify-content-center">
+                    <div class="col-md-8">
+                    </div>
+                </div>
+            </div>
         </section>
 
+    <!-- How to Order Images Section -->
+    <section class="how-to-order-images d-flex justify-content-center align-items-end gap-4 mb-5">
+        <img src="../assets/Order-11.png" alt="Order Step 1" style="width:200px; height:200px; object-fit:cover; border-radius:10px; margin: 20px;">
+        <img src="../assets/Order-12.png" alt="Order Step 2" style="width:200px; height:200px; object-fit:cover; border-radius:10px; margin: 20px;">
+        <img src="../assets/Order-13.png" alt="Order Step 3" style="width:200px; height:200px; object-fit:cover; border-radius:10px; margin: 20px;">
+    </section>
         <!-- Get a Quote Section -->
-        <section class="get-quote-section p-4 mb-5" style="background:#F0F7FF; border-radius:10px; max-width:700px; margin:auto;">
-            <h3 class="mb-4 text-center">Get a Quote</h3>
+        <section class="get-quote-section p-4 mb-5" style="background:#ffffff; border-color:#FCCD63; max-width:700px; margin:auto;">
+            <h3 class="mb-4 text-center" style="font-weight: bold;">Get a Quote</h3>
             <form id="quoteForm" enctype="multipart/form-data">
                 <!-- Requirement: Bottle Size -->
                 <div class="mb-3">
@@ -54,19 +64,19 @@
                     <div class="d-flex gap-3">
                         <div class="form-check">
                             <input class="form-check-input" type="radio" name="bottleSize" id="size500" value="500mL" required>
-                            <label class="form-check-label" for="size500">500mL</label>
+                            <label class="form-check-label" for="size500">200mL (Pack of 54)</label>
                         </div>
                         <div class="form-check">
                             <input class="form-check-input" type="radio" name="bottleSize" id="size750" value="750mL">
-                            <label class="form-check-label" for="size750">750mL</label>
+                            <label class="form-check-label" for="size750">500mL (Pack of 25)</label>
                         </div>
                         <div class="form-check">
                             <input class="form-check-input" type="radio" name="bottleSize" id="size1l" value="1L">
-                            <label class="form-check-label" for="size1l">1L</label>
+                            <label class="form-check-label" for="size1l">1L (Pack of 12)</label>
                         </div>
                     </div>
                 </div>
-                <!-- Pack Of -->
+                <!-- Pack Of 
                 <div class="mb-3">
                     <label class="form-label fw-bold">Pack Of</label>
                     <div class="d-flex gap-3">
@@ -83,7 +93,7 @@
                             <label class="form-check-label" for="pack24">24</label>
                         </div>
                     </div>
-                </div>
+                </div> -->
                 <!-- Name, Email, Phone -->
                 <div class="mb-3">
                     <label class="form-label fw-bold" for="name">Name</label>
@@ -97,6 +107,29 @@
                     <label class="form-label fw-bold" for="phone">Phone Number</label>
                     <input type="tel" class="form-control" id="phone" name="phone" required>
                 </div>
+
+                <!-- Purchase Type -->
+                <div class="mb-3">
+                    <label class="form-label fw-bold">Purchase Type</label>
+                    <div class="d-flex flex-column flex-md-row gap-3">
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="purchaseType" id="oneTime" value="one-time" checked required>
+                            <label class="form-check-label" for="oneTime">One-time purchase</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="purchaseType" id="subscribe" value="subscribe">
+                            <label class="form-check-label" for="subscribe">Subscribe and never be left thirsty</label>
+                        </div>
+                        <select class="form-select ms-md-3 mt-2 mt-md-0" id="subscriptionInterval" name="subscriptionInterval" style="max-width:220px; display:none;">
+                            <option value="">Select delivery interval</option>
+                            <option value="every week">Deliver every week</option>
+                            <option value="every 2 weeks">Deliver every 2 weeks</option>
+                            <option value="every month">Deliver every month</option>
+                            <option value="every 6 weeks">Deliver every 6 weeks</option>
+                            <option value="every 2 months">Deliver every 2 months</option>
+                        </select>
+                    </div>
+                </div>
                 <!-- Customize Checkbox -->
                 <div class="mb-3 form-check">
                     <input type="checkbox" class="form-check-input" id="customizeCheck" name="customize">
@@ -106,14 +139,15 @@
                 <div id="customOptions" style="display:none;">
                     <div class="mb-3">
                         <label class="form-label fw-bold" for="brandLogo">Your Brand Logo</label>
-                        <input type="file" class="form-control" id="brandLogo" name="brandLogo" accept="image/*">
+                        <input type="file" class="form-control" id="brandLogo" name="brandLogo" accept=".pdf,.jpg,.jpeg,.svg,.png,.cdr,.svf,.ai,.eps,.tiff,.bmp,.gif,image/*,application/pdf,application/postscript,application/x-cdr">
+                        <small class="form-text text-muted">Accepted formats: PDF, JPG, JPEG, SVG, PNG, CDR, SVF, AI, EPS, TIFF, BMP</small>
                     </div>
                     <div class="mb-3">
                         <label class="form-label fw-bold" for="themeDesc">Describe Theme</label>
                         <textarea class="form-control" id="themeDesc" name="themeDesc" rows="3" placeholder="Describe your theme..."></textarea>
                     </div>
                 </div>
-                <button type="submit" class="btn btn-primary w-100 mt-3">Submit</button>
+                <button type="submit" class="btn btn-primary w-100 mt-3" style="border-radius: 50px; border-color: #000; background-color: white; color: #000; box-shadow: 0 6px 0 0 #000; font-weight: bold;">Submit</button>
             </form>
         </section>
     </main>
@@ -151,6 +185,24 @@
         document.getElementById('customOptions').style.display = this.checked ? 'block' : 'none';
     });
 
+    // Show/hide subscription interval select based on purchase type
+    document.getElementById('oneTime').addEventListener('change', function() {
+        if (this.checked) {
+            document.getElementById('subscriptionInterval').style.display = 'none';
+        }
+    });
+    document.getElementById('subscribe').addEventListener('change', function() {
+        if (this.checked) {
+            document.getElementById('subscriptionInterval').style.display = 'block';
+        }
+    });
+    // Hide by default on page load if not checked
+    window.addEventListener('DOMContentLoaded', function() {
+        if (!document.getElementById('subscribe').checked) {
+            document.getElementById('subscriptionInterval').style.display = 'none';
+        }
+    });
+
     // Handle form submission
     document.getElementById('quoteForm').addEventListener('submit', async function(e) {
         e.preventDefault();
@@ -171,6 +223,7 @@
                 alert('Order submitted successfully!');
                 form.reset();
                 document.getElementById('customOptions').style.display = 'none';
+                document.getElementById('subscriptionInterval').style.display = 'none';
             } else {
                 alert(result.error || 'Submission failed.');
             }
@@ -179,5 +232,20 @@
         }
     });
     </script>
+    <script>
+  window.addEventListener("load", () => {
+    const flapOverlay = document.querySelector(".flap-overlay.initial-open");
+
+    // Trigger flap open animation
+    setTimeout(() => {
+      flapOverlay.classList.add("animate-out");
+
+      // Optional: remove flap DOM after animation
+      setTimeout(() => {
+        flapOverlay.remove();
+      }, 700); // slightly more than transition time
+    }, 100); // small delay so animation looks natural
+  });
+</script>
 </body>
 </html>

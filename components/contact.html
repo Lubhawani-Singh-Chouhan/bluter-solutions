@@ -11,54 +11,68 @@
     <link rel="stylesheet" href="../assets/styles.css">
 </head>
 <body>
-    <!-- Navbar (copied from main site) -->
-    <nav class="navbar navbar-expand-lg" style="background-color: #0c4144 !important;">
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light py-3">
         <div class="container-fluid">
-            <div class="d-flex align-items-center">
+            <div class="d-flex align-items-center justify-content-start" style="flex:1;">
                 <ul class="navbar-nav me-3 mb-2 mb-lg-0">
-                    <li class="nav-item"><a class="nav-link" href="../index.html#about" style="color:#fff !important;">About</a></li>
-                    <li class="nav-item"><a class="nav-link" href="../index.html#gallery" style="color:#fff !important;">Gallery</a></li>
-                    <li class="nav-item"><a class="nav-link active" href="contact.html" style="color:#fff !important;">Contact Us</a></li>
-                    <li class="nav-item"><a class="nav-link" href="order.html" style="color:#fff !important;">Order</a></li>
+                    <li class="nav-item"><a class="nav-link" href="components/about.html">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="components/gallery.html">Gallery</a></li>
+                    <li class="nav-item"><a class="nav-link" href="components/contact.html">Contact Us</a></li>
+                    <li class="nav-item"><a class="nav-link" href="components/order.html">Order</a></li>
                 </ul>
             </div>
-            <a class="navbar-brand mx-auto" href="../index.html">
-                <img src="../assets/logo.png" alt="Logo" width="60" height="60" class="d-inline-block align-text-top">
+            <a class="navbar-brand mx-auto" href="#">
+                <img src="../assets/Bluter logo.png" alt="Logo" width="60" height="60" class="d-inline-block align-text-top">
             </a>
             <div class="d-flex align-items-center">
-                <a href="#" class="me-3"><i class="bi bi-instagram fs-4" style="color:#fff;"></i></a>
-                <a href="#" class="me-3"><i class="bi bi-whatsapp fs-4" style="color:#fff;"></i></a>
-                <a href="#"><i class="bi bi-facebook fs-4" style="color:#fff;"></i></a>
+                <a href="#" class="me-3"><i class="bi bi-instagram fs-4"></i></a>
+                <a href="#" class="me-3"><i class="bi bi-whatsapp fs-4"></i></a>
+                <a href="#"><i class="bi bi-facebook fs-4"></i></a>
             </div>
         </div>
     </nav>
+    <div class="flap-overlay initial-open">
+  <div class="flap top-flap"></div>
+  <div class="flap bottom-flap"></div>
+</div>
+<!-- Contact Us -->
+        <section class="how-to-order py-0" id="order" style="margin-top:0 !important;">
+            <h3 class="mb-4 text-center" style="background-color: #F0F7FF; padding:40px 0; width:100vw; margin-left:50%; transform:translateX(-50%); font-weight:bold; font-size:32px; border:0;">Contact Us</h3>
+            <div class="container" style="padding:0 !important;">                
+                <div class="row justify-content-center">
+                    <div class="col-md-8">
+                    </div>
+                </div>
+            </div>
+        </section>
 
     <!-- Contact Form Section -->
     <section class="contact-form-section py-5">
         <div class="container" style="max-width: 600px;">
-            <h2 class="mb-4 text-center" style="color:#0A74DA; font-weight:700;">Drop your email</h2>
-            <form class="bg-white p-4 rounded shadow-sm">
+            <!-- <h2 class="mb-4 text-center" style="color:#0A74DA; font-weight:700;">Contact Us</h2> -->
+            <form class="bg-white p-4 rounded" style="box-shadow:none;">
                 <div class="mb-3">
-                    <label for="name" class="form-label">Enter Name</label>
+                    <label for="name" class="form-label" style="font-weight: bold;">Enter Name</label>
                     <input type="text" class="form-control" id="name" name="name" placeholder="Your Name" required>
-                </div>
+    
                 <div class="mb-3">
-                    <label for="email" class="form-label">Enter Email ID</label>
+                    <label for="email" class="form-label" style="font-weight: bold;">Enter Email ID</label>
                     <input type="email" class="form-control" id="email" name="email" placeholder="you@email.com" required>
                 </div>
                 <div class="mb-3">
-                    <label for="phone" class="form-label">Phone Number</label>
-                    <input type="tel" class="form-control" id="phone" name="phone" placeholder="Phone Number" required>
+                    <label for="phone" class="form-label" style="font-weight: bold;">Phone Number</label>
+                    <input type="tel" class="form-control" id="phone" name="phone" placeholder="+91" required>
                 </div>
-                <button type="submit" class="btn btn-primary w-100" style="border-radius:10px; background:#0A74DA; border:none; font-weight:600;">Submit</button>
+                <button type="submit" class="btn w-100 contact-submit-btn" style="border-radius:50px; background:#fff; color:#000; border:2px solid #000; font-weight:600; box-shadow: 0 6px 0 0 #222; transition: box-shadow 0.1s, transform 0.1s;">Submit</button>
             </form>
         </div>
     </section>
 
     <!-- Location Section -->
-    <section class="location-section py-5">
+    <section class="location-section py-5" style="background:#FCCD63;">
         <div class="container" style="max-width: 1369px;">
-            <h2 class="mb-4 text-center" style="color:#6E0437; font-weight:700;">Where are we located</h2>
+            <h2 class="mb-4 text-center" style="color:#000000; font-weight:700;">Where are we located</h2>
             <div class="rounded shadow" style="overflow:hidden; border-radius:16px; width:100%; height:400px;">
                 <iframe src="https://www.google.com/maps?q=XP4Q%2BCJJ,+Parmanand+Nagar,+Shanti+Path,+Jhotwara,+Jaipur,+Rajasthan+302012&output=embed" width="100%" height="400" style="border:0; border-radius:16px; width:100%; height:400px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
@@ -126,5 +140,28 @@
     });
     </script>
     <script src="../assets/scripts.js"></script>
+    <style>
+    .contact-submit-btn:hover {
+        background: #f5f5f5 !important;
+        color: #000 !important;
+        box-shadow: 0 2px 0 0 #222;
+        transform: translateY(2px);
+    }
+    </style>
+    <script>
+  window.addEventListener("load", () => {
+    const flapOverlay = document.querySelector(".flap-overlay.initial-open");
+
+    // Trigger flap open animation
+    setTimeout(() => {
+      flapOverlay.classList.add("animate-out");
+
+      // Optional: remove flap DOM after animation
+      setTimeout(() => {
+        flapOverlay.remove();
+      }, 700); // slightly more than transition time
+    }, 100); // small delay so animation looks natural
+  });
+</script>
 </body>
 </html>

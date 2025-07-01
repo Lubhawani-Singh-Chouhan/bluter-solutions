@@ -173,7 +173,7 @@ body {
 .brands {
     background: var(--bluter-white);
     border-radius: 10px;
-    margin-bottom: 2rem;
+    margin-bottom: 24px !important;
     box-shadow: 0 2px 16px rgba(10,116,218,0.04);
 }
 .brands h2 {
@@ -181,25 +181,29 @@ body {
     font-weight: 700;
 }
 .brands img {
-    filter: grayscale(60%);
-    opacity: 0.8;
-    margin: 0;
-    height: 60px;
-    border-radius: 10px;
-    transition: filter 0.3s, opacity 0.3s;
+    height: 200px !important;
+    width: auto !important;
+    max-width: 100%;
+    object-fit: contain !important;
+    border-radius: 10px !important;
+    filter: grayscale(0%) !important;
+    opacity: 1 !important;
+    margin: 0 8px;
+    transition: filter 0.3s;
 }
+
 .brands img:hover {
-    filter: grayscale(0%);
-    opacity: 1;
+    filter: grayscale(0%) !important;
+    opacity: 1 !important;
 }
 .brands-carousel img {
+    height: 200px !important;
+    min-height: 200px !important;
+    max-height: 200px !important;
     width: 288px !important;
     min-width: 288px !important;
     max-width: 288px !important;
-    height: 148px !important;
-    min-height: 148px !important;
-    max-height: 148px !important;
-    object-fit: cover !important;
+    object-fit: contain !important;
     border-radius: 10px !important;
     box-shadow: 0 2px 8px rgba(10,116,218,0.08) !important;
     margin: 0 !important;
@@ -214,6 +218,9 @@ body {
 }
 .brands-carousel-wrapper::-webkit-scrollbar {
     display: none; /* Chrome, Safari, Opera */
+}
+.brands img{
+    height: 200px !important;
 }
 
 .reviews {
@@ -311,6 +318,15 @@ body {
     transition: background 0.2s;
     margin-top: 16px;
 }
+.hero .order-here-btn {
+    background: #76CDD6 !important;
+    color: #000 !important;
+    border: 1.5px solid #000 !important;
+    box-shadow: 0 6px 0 0 #000 !important;
+    font-weight: bold;
+    border-radius: 50px;
+    position: relative;
+}
 .order-here-btn:hover {
     background: #353535 !important;
     color: #fff !important;
@@ -333,11 +349,8 @@ body {
     border: 2px solid #000 !important;
 }
 
-section {
-    /* margin-top: 68px !important; */
-    /* margin-bottom: 68px !important; */
-    /* border-radius: 10px !important; */
-}
+/* Remove the global section spacing override for about.html and index.html */
+/* (No action needed in contact.html, but this will be removed from styles.css) */
 
 @media (max-width: 1400px) {
     .navbar, .hero, .quality-standards, .currently-serving {
@@ -392,7 +405,6 @@ section {
         }
         .testimonials-section .card:hover {
           transform: scale(1.08);
-          box-shadow: 0 8px 32px rgba(10,116,218,0.18);
           z-index: 2;
         }
         .testimonials-section .card:not(:hover) {
@@ -528,4 +540,34 @@ p {
 }
 .flap-overlay.initial-open.animate-out .bottom-flap {
   transform: translateY(100%);
+}
+
+/* Add this to the end of the file for button hover consistency */
+.order-here-btn:hover,
+.get-quote-btn:hover,
+.btn.contact-submit-btn:hover,
+.btn.order-btn:hover,
+button[type="submit"]:hover {
+    background: #f5f5f5 !important;
+    color: #000 !important;
+    box-shadow: 0 2px 0 0 #222 !important;
+    transform: translateY(2px) !important;
+}
+
+/* Ensure 'Our Value' and 'Check our instagram' headings use Source Sans Pro font */
+h2.our-value-heading,
+h2.check-instagram-heading,
+.our-value-heading,
+.check-instagram-heading {
+  font-family: 'Source Sans Pro', Arial, sans-serif !important;
+}
+
+/* Set border-radius of all images in Gallery.html to 10px */
+.gallery-img {
+  border-radius: 10px !important;
+}
+
+/* Remove shadow from testimonial cards */
+.testimonials-section .card {
+  box-shadow: none !important;
 }

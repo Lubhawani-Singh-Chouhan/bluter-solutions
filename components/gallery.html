@@ -9,64 +9,74 @@
     <link rel="stylesheet" href="../assets/styles.css">
 </head>
 <body>
-    <!-- Navbar (same as other pages) -->
-    <nav class="navbar navbar-expand-lg" style="background-color: #0c4144 !important;">
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light py-3">
         <div class="container-fluid">
-            <div class="d-flex align-items-center">
+            <div class="d-flex align-items-center justify-content-start" style="flex:1;">
                 <ul class="navbar-nav me-3 mb-2 mb-lg-0">
-                    <li class="nav-item"><a class="nav-link" href="about.html" style="color:#fff !important;">About</a></li>
-                    <li class="nav-item"><a class="nav-link active" href="gallery.html" style="color:#fff !important;">Gallery</a></li>
-                    <li class="nav-item"><a class="nav-link" href="contact.html" style="color:#fff !important;">Contact Us</a></li>
-                    <li class="nav-item"><a class="nav-link" href="order.html" style="color:#fff !important;">Order</a></li>
+                    <li class="nav-item"><a class="nav-link" href="components/about.html">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="components/gallery.html">Gallery</a></li>
+                    <li class="nav-item"><a class="nav-link" href="components/contact.html">Contact Us</a></li>
+                    <li class="nav-item"><a class="nav-link" href="components/order.html">Order</a></li>
                 </ul>
             </div>
-            <a class="navbar-brand mx-auto" href="../index.html">
-                <img src="../assets/logo.png" alt="Logo" width="60" height="60" class="d-inline-block align-text-top">
+            <a class="navbar-brand mx-auto" href="#">
+                <img src="../assets/Bluter logo.png" alt="Logo" width="60" height="60" class="d-inline-block align-text-top">
             </a>
             <div class="d-flex align-items-center">
-                <a href="#" class="me-3"><i class="bi bi-instagram fs-4" style="color:#fff;"></i></a>
-                <a href="#" class="me-3"><i class="bi bi-whatsapp fs-4" style="color:#fff;"></i></a>
-                <a href="#"><i class="bi bi-facebook fs-4" style="color:#fff;"></i></a>
+                <a href="#" class="me-3"><i class="bi bi-instagram fs-4"></i></a>
+                <a href="#" class="me-3"><i class="bi bi-whatsapp fs-4"></i></a>
+                <a href="#"><i class="bi bi-facebook fs-4"></i></a>
             </div>
         </div>
     </nav>
 
+    <div class="flap-overlay initial-open">
+  <div class="flap top-flap"></div>
+  <div class="flap bottom-flap"></div>
+</div>
+
+<!-- Gallery -->
+        <section class="how-to-order py-0" id="order" style="margin-top:0 !important;">
+            <h3 class="mb-4 text-center" style="background-color: #F0F7FF; padding:40px 0; width:100vw; margin-left:50%; transform:translateX(-50%); font-weight:bold; font-size:32px; border:0;">Gallery</h3>
+            <div class="container" style="padding:0 !important;">                
+                <div class="row justify-content-center">
+                    <div class="col-md-8">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
     <!-- Gallery Section -->
     <section class="gallery-section py-5" style="width:1359px; margin:96px auto 0 auto;">
-        <h2 class="mb-4 text-center" style="color:#0A74DA; font-weight:700;">Gallery</h2>
-        <div class="row g-4">
-            <div class="col-md-4">
-                <div class="gallery-img-wrapper animate__animated animate__zoomIn">
-                    <img src="https://images.unsplash.com/photo-1519125323398-675f0ddb6308?auto=format&fit=crop&w=600&q=80" alt="Gallery 1" class="img-fluid rounded shadow-lg" style="height:340px; object-fit:cover;">
-                </div>
+        <div class="row g-0 justify-content-center" style="gap:40px 0;">
+            <div class="col-md-4 d-flex justify-content-center" style="margin-bottom:40px;">
+                <img src="../assets/IMG_4974.PNG" alt="Gallery 1" class="img-fluid rounded gallery-img gallery-anim" style="height:340px; width:100%; max-width:100%; object-fit:contain; background:#fff; cursor:pointer; margin-right:40px; box-shadow:none; opacity:0; transform:translateY(40px); transition:opacity 0.7s cubic-bezier(.4,2,.6,1), transform 0.7s cubic-bezier(.4,2,.6,1);">
             </div>
-            <div class="col-md-4">
-                <div class="gallery-img-wrapper animate__animated animate__zoomIn animate__delay-1s">
-                    <img src="https://images.unsplash.com/photo-1503602642458-232111445657?auto=format&fit=crop&w=600&q=80" alt="Gallery 2" class="img-fluid rounded shadow-lg" style="height:340px; object-fit:cover;">
-                </div>
+            <div class="col-md-4 d-flex justify-content-center" style="margin-bottom:40px;">
+                <img src="../assets/IMG_4976.PNG" alt="Gallery 2" class="img-fluid rounded gallery-img gallery-anim" style="height:340px; width:100%; max-width:100%; object-fit:contain; background:#fff; cursor:pointer; margin-right:40px; box-shadow:none; opacity:0; transform:translateY(40px); transition:opacity 0.7s cubic-bezier(.4,2,.6,1), transform 0.7s cubic-bezier(.4,2,.6,1);">
             </div>
-            <div class="col-md-4">
-                <div class="gallery-img-wrapper animate__animated animate__zoomIn animate__delay-2s">
-                    <img src="https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=600&q=80" alt="Gallery 3" class="img-fluid rounded shadow-lg" style="height:340px; object-fit:cover;">
-                </div>
+            <div class="col-md-4 d-flex justify-content-center" style="margin-bottom:40px;">
+                <img src="../assets/IMG_4979.PNG" alt="Gallery 3" class="img-fluid rounded gallery-img gallery-anim" style="height:340px; width:100%; max-width:100%; object-fit:contain; background:#fff; cursor:pointer; margin-right:40px; box-shadow:none; opacity:0; transform:translateY(40px); transition:opacity 0.7s cubic-bezier(.4,2,.6,1), transform 0.7s cubic-bezier(.4,2,.6,1);">
             </div>
-            <div class="col-md-4">
-                <div class="gallery-img-wrapper animate__animated animate__zoomIn animate__delay-3s">
-                    <img src="https://images.unsplash.com/photo-1519985176271-adb1088fa94c?auto=format&fit=crop&w=600&q=80" alt="Gallery 4" class="img-fluid rounded shadow-lg" style="height:340px; object-fit:cover;">
-                </div>
+            <div class="col-md-4 d-flex justify-content-center" style="margin-bottom:40px;">
+                <img src="../assets/IMG_4983.PNG" alt="Gallery 4" class="img-fluid rounded gallery-img gallery-anim" style="height:340px; width:100%; max-width:100%; object-fit:contain; background:#fff; cursor:pointer; margin-right:40px; box-shadow:none; opacity:0; transform:translateY(40px); transition:opacity 0.7s cubic-bezier(.4,2,.6,1), transform 0.7s cubic-bezier(.4,2,.6,1);">
             </div>
-            <div class="col-md-4">
-                <div class="gallery-img-wrapper animate__animated animate__zoomIn animate__delay-4s">
-                    <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=600&q=80" alt="Gallery 5" class="img-fluid rounded shadow-lg" style="height:340px; object-fit:cover;">
-                </div>
+            <div class="col-md-4 d-flex justify-content-center" style="margin-bottom:40px;">
+                <img src="../assets/IMG_4985.PNG" alt="Gallery 5" class="img-fluid rounded gallery-img gallery-anim" style="height:340px; width:100%; max-width:100%; object-fit:contain; background:#fff; cursor:pointer; margin-right:40px; box-shadow:none; opacity:0; transform:translateY(40px); transition:opacity 0.7s cubic-bezier(.4,2,.6,1), transform 0.7s cubic-bezier(.4,2,.6,1);">
             </div>
-            <div class="col-md-4">
-                <div class="gallery-img-wrapper animate__animated animate__zoomIn animate__delay-5s">
-                    <img src="https://images.unsplash.com/photo-1509228468518-180dd4864904?auto=format&fit=crop&w=600&q=80" alt="Gallery 6" class="img-fluid rounded shadow-lg" style="height:340px; object-fit:cover;">
-                </div>
+            <div class="col-md-4 d-flex justify-content-center" style="margin-bottom:40px;">
+                <img src="../assets/IMG_4987.PNG" alt="Gallery 6" class="img-fluid rounded gallery-img gallery-anim" style="height:340px; width:100%; max-width:100%; object-fit:contain; background:#fff; cursor:pointer; margin-right:40px; box-shadow:none; opacity:0; transform:translateY(40px); transition:opacity 0.7s cubic-bezier(.4,2,.6,1), transform 0.7s cubic-bezier(.4,2,.6,1);">
             </div>
         </div>
     </section>
+
+    <!-- Gallery Popup/Lightbox -->
+    <div id="gallery-popup" style="display:none; position:fixed; z-index:2000; left:0; top:0; width:100vw; height:100vh; background:rgba(0,0,0,0.8); align-items:center; justify-content:center;">
+        <span id="gallery-popup-close" style="position:absolute; top:40px; right:60px; color:#fff; font-size:48px; cursor:pointer; z-index:2010;">&times;</span>
+        <img id="gallery-popup-img" src="" alt="Popup" style="max-width:90vw; max-height:80vh; border-radius:16px; box-shadow:0 8px 32px rgba(0,0,0,0.5); display:block; margin:auto;">
+    </div>
 
     <!-- Footer (same as other pages) -->
     <footer class="footer bg-dark text-white py-4">
@@ -96,5 +106,53 @@
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="../assets/scripts.js"></script>
+    <script>
+    // Gallery popup/lightbox logic
+    document.querySelectorAll('.gallery-img').forEach(function(img) {
+        img.addEventListener('click', function() {
+            document.getElementById('gallery-popup-img').src = this.src;
+            document.getElementById('gallery-popup').style.display = 'flex';
+        });
+    });
+    // Close on X
+    document.getElementById('gallery-popup-close').onclick = function() {
+        document.getElementById('gallery-popup').style.display = 'none';
+        document.getElementById('gallery-popup-img').src = '';
+    };
+    // Close on outside click
+    document.getElementById('gallery-popup').addEventListener('click', function(e) {
+        if (e.target === this) {
+            this.style.display = 'none';
+            document.getElementById('gallery-popup-img').src = '';
+        }
+    });
+    </script>
+    <script>
+  window.addEventListener("load", () => {
+    const flapOverlay = document.querySelector(".flap-overlay.initial-open");
+
+    // Trigger flap open animation
+    setTimeout(() => {
+      flapOverlay.classList.add("animate-out");
+
+      // Optional: remove flap DOM after animation
+      setTimeout(() => {
+        flapOverlay.remove();
+      }, 700); // slightly more than transition time
+    }, 100); // small delay so animation looks natural
+  });
+</script>
+<script>
+// Animate gallery images one by one
+window.addEventListener('DOMContentLoaded', function() {
+  const imgs = document.querySelectorAll('.gallery-anim');
+  imgs.forEach((img, i) => {
+    setTimeout(() => {
+      img.style.opacity = 1;
+      img.style.transform = 'translateY(0)';
+    }, 200 + i * 200);
+  });
+});
+</script>
 </body>
 </html>
